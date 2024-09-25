@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   jaeger-all-in-one:
   - apiVersion: v2
+    appVersion: 1.16.1
+    created: "2024-09-25T13:56:05.74717+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 31409f799ff967d8a6c0f63c5a595870d97010085160f9d26b47ec04aea7c6f7
+    name: jaeger-all-in-one
+    type: application
+    urls:
+    - https://vinaybedre.github.io/helm/jaeger-all-in-one-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-09-25T13:49:26.542096+02:00"
+    created: "2024-09-25T13:56:05.747005+02:00"
     description: A Helm chart for Kubernetes
     digest: eadb8768c17ec87e830c980b4f35d0e1c90ae79976c4157725f8df36f61784d2
     name: jaeger-all-in-one
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://vinaybedre.github.io/helm/jaeger-all-in-one-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-25T13:49:26.541893+02:00"
+generated: "2024-09-25T13:56:05.746787+02:00"
