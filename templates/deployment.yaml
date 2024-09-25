@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "jaeger-all-in-one.fullname" . }}
+  labels:
+    app: {{ include "jaeger-all-in-one.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "jaeger-all-in-one.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "jaeger-all-in-one.name" . }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+          - containerPort: 4318  # OpenTelemetry
+            protocol: TCP
+          - containerPort: 16686 # Jaeger UI
+            protocol: TCP

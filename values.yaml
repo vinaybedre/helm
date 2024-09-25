@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: jaegertracing/all-in-one
+  tag: 1.45
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  ports:
+    - name: opentelemetry
+      port: 4318
+    - name: ui
+      port: 16686
